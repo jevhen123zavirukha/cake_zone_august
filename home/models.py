@@ -8,13 +8,13 @@ class Establishment(models.Model):
     phone = models.CharField(max_length=20)
     email = models.EmailField()
     website = models.URLField(blank=True, null=True)
+    is_visible = models.BooleanField(default=True)
 
     def __str__(self):
         return self.name
 
     class Meta:
         verbose_name_plural = 'Establishments'
-        # ordering = ['sort',]
 
 
 class CustomerReview(models.Model):
@@ -29,4 +29,3 @@ class CustomerReview(models.Model):
 
     class Meta:
         verbose_name_plural = 'Customer Reviews'
-        # ordering = ('sort',)

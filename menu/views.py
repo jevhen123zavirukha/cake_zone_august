@@ -1,10 +1,10 @@
 from django.shortcuts import render
-from menu.models import Category
+from .models import Category
 
 
-def index_menu(request):
+def index(request):
     categories = Category.objects.filter(is_visible=True)
     context = {
-        'categories': categories
+        'categories': categories,
     }
     return render(request, 'menu.html', context=context)

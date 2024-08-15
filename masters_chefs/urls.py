@@ -1,8 +1,8 @@
 from django.urls import path
-from .views import index_masters
+from .views import index
 
-app_name = 'master_chefs'
+app_name = 'masters_chefs'
 
 urlpatterns = [
-    path('', index_masters, name='master_chefs'),
+    path('', index, name='masters_chefs'),
 ]
