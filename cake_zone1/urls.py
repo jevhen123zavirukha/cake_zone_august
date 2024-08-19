@@ -17,7 +17,7 @@ Including another URLconf
 from django.contrib import admin
 from django.urls import path, include
 from django.conf.urls.static import static
-
+from contact_us.urls_subscribe import subscribe
 from cake_zone1 import settings
 
 urlpatterns = [
@@ -28,6 +28,7 @@ urlpatterns = [
     path('masters_chefs/', include('masters_chefs.urls')),
     path('service/', include('our_service.urls')),
     path('contact_us/', include('contact_us.urls')),
+    path('subscribe/', subscribe, name='subscribe'),
 ]
 
 if settings.DEBUG:
