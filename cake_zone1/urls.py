@@ -20,6 +20,8 @@ from django.conf.urls.static import static
 from contact_us.urls_subscribe import subscribe
 from cake_zone1 import settings
 
+from account.views import RegisterView, MyLoginView
+
 urlpatterns = [
     path('admin/', admin.site.urls),
 
@@ -29,6 +31,10 @@ urlpatterns = [
     path('service/', include('our_service.urls')),
     path('contact_us/', include('contact_us.urls')),
     path('subscribe/', subscribe, name='subscribe'),
+
+    path('register/', RegisterView.as_view(), name='register'),
+    path('login/', MyLoginView.as_view(), name='login'),
+    # path('logout/', , name='logout'),
 ]
 
 if settings.DEBUG:

@@ -41,7 +41,8 @@ INSTALLED_APPS = [
     "home.apps.HomeConfig",
     "masters_chefs.apps.MastersChefsConfig",
     "menu.apps.MenuConfig",
-    "our_service.apps.OurServiceConfig"
+    "our_service.apps.OurServiceConfig",
+    "account.apps.AccountConfig"
 ]
 
 MIDDLEWARE = [
