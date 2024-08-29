@@ -28,8 +28,8 @@ def subscribe(request):
         form = SubscriberForm(request.POST)
         if form.is_valid():
             form.save()
-            return redirect('success_page')
+            return redirect('home:home')
     else:
         form = SubscriberForm()
 
-    return render(request, 'contact.html', {'subscriber_form': form})
+    return render(request, 'subscribe.html', {'subscriber_form': form})
